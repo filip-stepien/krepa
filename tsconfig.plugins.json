@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "outDir": "./plugins/build",
+        "rootDir": "./plugins"
+    },
+    "include": ["plugins/**/*.ts"],
+    "exclude": ["node_modules", "plugins/build"]
+}

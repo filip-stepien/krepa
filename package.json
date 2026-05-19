@@ -3,9 +3,12 @@
     "version": "1.0.0",
     "main": "index.ts",
     "scripts": {
+        "plugins": "tsc --project tsconfig.plugins.json",
+        "android": "npm run plugins && expo prebuild --clean && expo run:android",
+        "android:dev": "expo run:android",
+        "ios": "npm run plugins && expo prebuild --clean && expo run:ios",
+        "ios:dev": "expo run:ios",
         "start": "expo start",
-        "android": "expo start --android",
-        "ios": "expo start --ios",
         "web": "expo start --web",
         "lint": "expo lint",
         "pretty": "prettier --write ."
@@ -17,12 +20,15 @@
         "expo-status-bar": "~55.0.6",
         "prettier": "^3.8.3",
         "react": "19.2.0",
-        "react-native": "0.83.6"
+        "react-native": "0.83.6",
+        "react-native-health-connect": "^3.5.3"
     },
     "devDependencies": {
         "@types/react": "~19.2.2",
+        "@types/xcode": "^3.0.0",
         "eslint": "^9.0.0",
         "eslint-config-expo": "~55.0.1",
+        "expo-build-properties": "^55.0.14",
         "typescript": "~5.9.2"
     },
     "private": true
